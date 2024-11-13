@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>Python Documentation</header>
+        <ul>
+            <li><a class="nav-link" href="#Getting_Started_with_Python">Getting Started with Python</a></li>
+            <li><a class="nav-link" href="#Python_Entry_Point">Python Entry Point</a></li>
+            <li><a class="nav-link" href="#Printing_to_the_console">Printing to the Console</a></li>
+            <li><a class="nav-link" href="#Declaring_Functions">Declaring Functions</a></li>
+            <li><a class="nav-link" href="#Object_Oriented_Programming">Object Oriented Programming</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Getting_Started_with_Python">
+            <header>Getting Started with Python</header>
+            <p>Steps in getting started</p>
+            <ol>
+                <li>Download Python</li>
+                <li>Get an Integrated Development Environment (IDE)</li>
+                <li>Start a project within the IDE</li>
+                <li>Code up "Hello World" and run the code</li>
+                <li>Practice and build small projects</li>
+            </ol>
+        </section>
+        <section class="main-section" id="Python_Entry_Point">
+            <header>Python Entry Point</header>
+            <p>In Python, the entry point refers to the first part of your code that the Python interpreter will execute. </p>
+            <p>
+                By convention, this is usually managed with a special if __name__ == "__main__": block.
+            </p>
+            <pre>
+                <code>
+                    def main():
+                        print("Hello, World!")
+
+                    if __name__ == "__main__":
+                        main()
+                </code>
+            </pre>
+            <p>When you run this script directly, Python will execute main(), printing "Hello, World!".</p>
+            <p>If you import this script as a module in another script, the main() function won't run automatically because the if condition won't be met.</p>
+        </section>
+        <section class="main-section" id="Printing_to_the_Console">
+            <header>Printing to the Console</header>
+            <p>In Python, printing to the console is simple. You can use the print() function to display text, numbers, or even complex data structures.</p>
+            <p>To print text or numbers, just pass them as arguments to print()</p>
+            <pre>
+                <code>
+                    print("Hello, World!")   # Prints: Hello, World!
+                    print(42)                # Prints: 42
+                    print(3.14)              # Prints: 3.14
+
+                </code>
+            </pre>
+            <p>Using print() effectively helps display feedback or debug information, making it an essential tool in any Python project!</p>
+
+            <pre>
+                <code>
+                    name = "Alice"
+                    age = 25
+                    print("Name:", name, "Age:", age)   # Prints: Name: Alice Age: 25
+                </code>
+            </pre>
+            <p>You can print multiple items by separating them with commas. print() will automatically add a space between each item</p>
+        </section>
+        <section class="main-section" id="Declaring_Functions">
+            <header>Declaring Fucntions</header>
+            <p>Declaring functions in Python is straightforward. Functions are defined using the def keyword, followed by the function name, parentheses for parameters, and a colon.</p>
+            <img src="https://upscfever.com/upsc-fever/en/programming/datascience/images/FuncsVar.png" alt="python-method-img" class="image"/>
+            <p>Some copiable code:</p>
+            <pre>
+                <code>
+                    def greet():
+                        print("Hello, World!")
+                </code>
+            </pre>
+        </section>
+        <section class="main-section" id="Object_Oriented_Programming">
+            <header>Object Oriented Programming</header>
+            <p>Python fully supports object-oriented programming (OOP), which lets you create classes, objects, and methods to organize code into reusable components</p>
+            <p>Here is an example:</p>
+            <pre>
+                <code>
+                    class Animal:
+                        def __init__(self, name):
+                            self.name = name
+
+                        def speak(self):
+                            raise NotImplementedError("Subclasses must implement this method")
+
+                    class Dog(Animal):
+                        def speak(self):
+                            return "Woof!"
+
+                    class Cat(Animal):
+                         def speak(self):
+                             return "Meow!"
+
+                    animals = [Dog("Rover"), Cat("Whiskers")]
+                    for animal in animals:
+                        print(f"{animal.name} says {animal.speak()}")
+
+                </code>
+            </pre>
+        </section>
+        <footer>
+            <p>Documentation brought to you by Wyne</p>
+        </footer>
+    </main>
+</body>
+</html>
